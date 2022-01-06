@@ -21,13 +21,6 @@ services:
       '--pruning', 'archive',
       '--validator'
     ]
-  polkadot-watcher:
-    container_name: polkadot-watcher
-    image: web3f/polkadot-watcher:v3.1.0
-    ports:
-      - 3002:3000
-    volumes:
-      - ./polkadot-watcher/config:/app/config
   polkadotui:
     container_name: polkadotui
     image: jacogr/polkadot-js-apps:latest
@@ -80,6 +73,13 @@ services:
       - ./substrate-telemetry-exporter/config/:/app/config/
     expose:
       - 3000
+  polkadot-watcher:
+    container_name: polkadot-watcher
+    image: web3f/polkadot-watcher:v3.1.0
+    ports:
+      - 3002:3000
+    volumes:
+      - ./polkadot-watcher/config:/app/config
   prometheus:
     image: prom/prometheus:v2.1.0
     volumes:
