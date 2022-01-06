@@ -1,0 +1,5 @@
+extraEnv:
+  - name: POSTGRES_PASSWORD
+    value: password
+  - name: POSTGRES_DB
+    value: chainlink

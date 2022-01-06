@@ -1,0 +1,8 @@
+endpoint: "wss://kusama-rpc.polkadot.io/"
+port: 3000
+logLevel: info
+validators:
+- name: test
+  address: Gt6HqWBhdu4Sy1u8ASTbS1qf2Ac5gwdegwr8tWN8saMxPt5
+- name: test-stake-fish
+  address: FHfishKQzf3CCWvNDJRCEYTH3HD1eSYa4gBCC35iFznpvus

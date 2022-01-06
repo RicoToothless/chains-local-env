@@ -1,0 +1,26 @@
+image:
+  repository: smartcontract/chainlink
+  tag: 1.0.1
+
+config:
+  # Login Info
+  LOG_LEVEL: debug
+  ROOT: /chainlink
+  API_LOGIN: |
+    user@example.com
+    PA@SSword1234!567
+  WALLET_PASSWORD: "PA@SSword1234!567"
+  # HTTP Security
+  ALLOW_ORIGINS: "*"
+  SECURE_COOKIES: "false"
+  CHAINLINK_PORT: "6688"
+  CHAINLINK_TLS_PORT: "0"
+  # Database
+  DATABASE_TIMEOUT: "0"
+  DATABASE_URL: postgresql://postgres:password@postrges-postgresql:5432/chainlink?sslmode=disable
+  # Ethereum
+  ETH_URL: wss://rinkeby-light.eth.linkpool.io/ws
+  ETH_CHAIN_ID: "4"
+  MIN_OUTGOING_CONFIRMATIONS: "2"
+  GAS_UPDATER_ENABLED: "false"
+  LINK_CONTRACT_ADDRESS: 0x01BE23585060835E02B77ef475b0Cc51aA1e0709
