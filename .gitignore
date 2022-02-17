@@ -1,6 +1,7 @@
 .idea/
 polkadot/
 prometheus-data/
+grafana-data/
 
 # Local .terraform directories
 **/.terraform/*
