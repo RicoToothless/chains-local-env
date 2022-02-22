@@ -1,0 +1,104 @@
+version: '2'
+
+services:
+  polkadot-watcher-1:
+    image: web3f/polkadot-watcher:v3.2.2
+    ports:
+      - 3002:3000
+    volumes:
+      - ./polkadot-watcher/config:/app/config
+    restart: always
+  polkadot-watcher-2:
+    image: web3f/polkadot-watcher:v3.2.2
+    ports:
+      - 3004:3000
+    volumes:
+      - ./polkadot-watcher/config-test:/app/config
+    restart: always
+        #  polkadotui:
+        #    image: jacogr/polkadot-js-apps:latest
+        #    environment:
+        #      WS_URL: ws://localhost:9944
+        #    ports:
+        #      - 8888:80
+        #  telemetry-frontend:
+        #    image: parity/substrate-telemetry-frontend:05f165e1
+        #    #    read_only: true
+        #    tmpfs:
+        #      - /var/cache/nginx:uid=101,gid=101
+        #      - /var/run:uid=101,gid=101
+        #      - /app/tmp:uid=101,gid=101
+        #    environment:
+        #      SUBSTRATE_TELEMETRY_URL: ws://localhost:8000/feed/
+        #    ports:
+        #      - 3000:8000
+        #    expose:
+        #      - 3000
+        #  telemetry-backend-shard:
+        #    image: parity/substrate-telemetry-backend:05f165e1
+        #    read_only: true
+        #    command: [
+        #      'telemetry_shard',
+        #      '--listen', '0.0.0.0:8001',
+        #      '--core', 'http://telemetry-backend-core:8000/shard_submit'
+        #    ]
+        #    ports:
+        #      - 8001:8001
+        #    expose:
+        #      - 8001
+        #  telemetry-backend-core:
+        #    image: parity/substrate-telemetry-backend:05f165e1
+        #    read_only: true
+        #    command: [
+        #      'telemetry_core',
+        #      '--listen', '0.0.0.0:8000'
+        #    ]
+        #    ports:
+        #      - 8000:8000
+        #    expose:
+        #      - 8000
+        #  substrate-telemetry-exporter:
+        #    image: web3f/substrate-telemetry-exporter:v2.1.0
+        #    command: ['yarn', 'start']
+        #    ports:
+        #      - 3001:3000
+        #    volumes:
+        #      - ./substrate-telemetry-exporter/config/:/app/config/
+        #    expose:
+        #      - 3000
+  prometheus:
+    image: prom/prometheus:v2.1.0
+    volumes:
+      - ./prometheus/:/etc/prometheus/
+      - ./prometheus-data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+      - '--web.console.templates=/usr/share/prometheus/consoles'
+    ports:
+      - 9090:9090
+    restart: always
+  alertmanager:
+    image: prom/alertmanager
+    ports:
+      - 9093:9093
+    volumes:
+      - ./alertmanager/:/etc/alertmanager/
+    restart: always
+    command:
+      - '--config.file=/etc/alertmanager/config.yml'
+      - '--storage.path=/alertmanager'
+  grafana:
+    image: grafana/grafana
+    user: "472"
+    depends_on:
+      - prometheus
+    ports:
+      - 3003:3000
+    volumes:
+      - ./grafana-data:/var/lib/grafana
+      - ./grafana/provisioning/:/etc/grafana/provisioning/
+    env_file:
+      - ./grafana/config.monitoring
+    restart: always

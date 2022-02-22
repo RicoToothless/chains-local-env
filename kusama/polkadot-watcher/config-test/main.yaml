@@ -1,0 +1,88 @@
+endpoint: "wss://kusama-rpc.polkadot.io/"
+port: 3000
+logLevel: info
+validators:
+  #- name: test
+  #  address: Gt6HqWBhdu4Sy1u8ASTbS1qf2Ac5gwdegwr8tWN8saMxPt5
+  #- name: test-stake-fish
+  #  address: FHfishKQzf3CCWvNDJRCEYTH3HD1eSYa4gBCC35iFznpvus
+- name: kusama-test-01
+  address: CaoTugdjFQ86Bg6sC8CiJyeNPiU8U1ZVLTXhheyENrjApqh
+- name: kusama-test-02
+  address: EGP7XztdTosm1EmaATZVMjSWujGEj9nNidhjqA2zZtttkFg
+- name: kusama-test-03
+  address: Cg8yN3VucSgk15boaYbFe1mUAybhD8Znh8mnk1PN43SfLZn
+- name: kusama-test-04
+  address: CeD8Kk3QLzp2HDRSciF6YQAc2xYAPurMsHAQUGwEJgCWAf2
+- name: kusama-test-05
+  address: CryxcSGhks3hR53BbaczeDwKvg1Me6RdbWHsXngFREcrH8B
+- name: kusama-test-06
+  address: Cg8yN3VucSgk15boaYbFe1mUAybhD8Znh8mnk1PN43SfLZn
+- name: kusama-test-07
+  address: CczSz9z41uHpftVviWz91TgjLe3SmbvXfbAc958cjy7F6Qs
+- name: kusama-test-08
+  address: CaoTugdjFQ86Bg6sC8CiJyeNPiU8U1ZVLTXhheyENrjApqh
+- name: kusama-test-09
+  address: Cw2HqJ6m2pXVDatzZq8wNdUWwWaCnYLeyTM24ft3JNdZ25E
+- name: kusama-test-10
+  address: Czugca19RKdxVttvfqC6vEZSxm15JG224JHqfPvX5tcD39A
+- name: kusama-test-11
+  address: CjKFSGBZF1x1ByBxV4LNbLsW5H2Fyrwx8vbdmVQ4JKg7SM3
+- name: kusama-test-12
+  address: CpYNXnYC1mPPRSXMHvm9EUuhEqHjvj6kCN4kshqMdEpPYSF
+- name: kusama-test-13
+  address: CwbhRTKghR9XphZk5Eb7LwA7sUjPv3dKfNiMvgWzM5SZt7K
+- name: kusama-test-14
+  address: Czugca4SeLTxBsZvmrQ32yJRGSjpuBEMJADZLsA3vXUJMbQ
+- name: kusama-test-15
+  address: CzugcarnfhejDPk1EKsihNSggpLmav9FUTjtqMk9M16cmps
+- name: kusama-test-16
+  address: D2r9AudNkHHpKfGtS5rpVHkchBoBhRsR6TmNcTuU4yiTp6w
+- name: kusama-test-17
+  address: D3GpUSsNEnabe5mX8bCkq8Nnc9FVsZgb9nBbTjBq8t52GBg
+- name: kusama-test-18
+  address: DBRXBqJqK41stDE8dvaLMXGq5hQpr4PQ6VkkudpBYDYBYae
+- name: kusama-test-19
+  address: DB4BYokEZ3u9JrTtQUcVp1XwtPDjtGpq3Vv8JKBwPmWQ8zD
+- name: kusama-test-20
+  address: DQX3arNph8UXAALhLM6vj4a4B5E68vYaLDh9Up9gsz1h4HE
+- name: kusama-test-21
+  address: JGkbNNGW8PFoTbxUkWou6a4wwP38ZVkPv6Q1UZTV5fymUd4
+- name: kusama-test-22
+  address: J6kxSHc54gJnqFTUjopUhbxj8RXTRj5doGHL6nSrY3FFJui
+- name: kusama-test-23
+  address: HnAVZ5w5RP5PHX2bXPsFWJ42hYdzV9r5FoDTEiHhLSfWtPp
+- name: kusama-test-24
+  address: HZQTfSZnFWxGDYT83CcF3QEEzpiUhAQbJAyuh1XGoQ8vTJu
+- name: kusama-test-25
+  address: GtchQYnbrzKeBEuZf7UKgb2mGRzX7cXRT6wav3CDG4eEbb4
+- name: kusama-test-26
+  address: GhS2L5H1ebHHRDwDMtMtcMyaJsJcncyHDmuUJwHAimifTbx
+- name: kusama-test-27
+  address: GZkaYjRfdvFo9SPx8iTC19274xChcvdoSikbJ2ygCcMq3RC
+- name: kusama-test-28
+  address: GXTJJh2kQJoS9amET2WmZ82uFkm7HYCScoP9bEDV5JyKsWE
+- name: kusama-test-29
+  address: GZkaYjRfdvFo9SPx8iTC19274xChcvdoSikbJ2ygCcMq3RC
+- name: kusama-test-30
+  address: GM9dSVNSrskXAruSdDGteqGtv8uv4zoLty6FrQLhrgp5enN
+- name: kusama-test-31
+  address: GJHL21JzRfcXWN2DEVuDcTB6Ja7jV9VkeWsc8VPenWv5ZDQ
+- name: kusama-test-32
+  address: FqZYpJd23UXZxvYoXeDohcAxK2NQWUdTqfTE8jCGJQrNf6h
+- name: kusama-test-33
+  address: FDKyVTqcnVpmQkBez6mmawzLHeZhbpGmznVZfUxZmjsVQrL
+- name: kusama-test-34
+  address: F5YUotdVsSxgF9kuoC6UySCdJBQKUnP8ry5baevkHYqTV7T
+- name: kusama-test-35
+  address: Equen1McriMwoHSSJq8SymTXG9DjH7UEJ3GCkZyDhQbexXK
+- name: kusama-test-36
+  address: EVRfx3u3ybP1dNTX6imFidqF1FeevcvFPbJLUeRNMudvP3P
+- name: kusama-test-37
+  address: EVRfx3u3ybP1dNTX6imFidqF1FeevcvFPbJLUeRNMudvP3P
+- name: kusama-test-38
+  address: EUtp7VXD4xQhEneqdonukxCt5eiSW6E5VXPrMBVfbsyFSjm
+- name: kusama-test-39
+  address: E388mcZWTDTfn7midofsP8987bUFBTXMFgjrz9KEpWdqhgM
+- name: kusama-test-40
+  address: DzSj1Z9PoqM6shYfgn3FTVpavhxF9Jo25kmgGU3NGGfo7qY
