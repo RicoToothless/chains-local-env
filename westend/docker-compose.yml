@@ -21,19 +21,12 @@ services:
   #      '--pruning', 'archive',
   #      '--validator'
   #    ]
-  polkadot-watcher-1:
+  polkadot-watcher:
     image: web3f/polkadot-watcher:v3.2.2
     ports:
       - 3002:3000
     volumes:
       - ./polkadot-watcher/config:/app/config
-    restart: always
-  polkadot-watcher-2:
-    image: web3f/polkadot-watcher:v3.2.2
-    ports:
-      - 3004:3000
-    volumes:
-      - ./polkadot-watcher/config-test:/app/config
     restart: always
         #  polkadotui:
         #    image: jacogr/polkadot-js-apps:latest

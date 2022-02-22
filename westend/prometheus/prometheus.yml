@@ -61,13 +61,9 @@ scrape_configs:
         #    static_configs:
         #      - targets: ['westend-validator:9615']
         #
-  - job_name: 'polkadot-watcher-1'
+  - job_name: 'polkadot-watcher'
     static_configs:
-      - targets: ['polkadot-watcher-1:3000']
-
-  - job_name: 'polkadot-watcher-2'
-    static_configs:
-      - targets: ['polkadot-watcher-2:3000']
+      - targets: ['polkadot-watcher:3000']
 
         #  - job_name: 'substrate-telemetry-exporter'
         #
