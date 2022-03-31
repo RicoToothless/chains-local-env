@@ -1,13 +1,14 @@
 version: '3'
 
 services:
-  gethexporter:
-    image: hunterlong/gethexporter:latest
+  ethexporter:
+    image: hunterlong/ethexporter:latest
     environment:
       - GETH=https://mainnet.infura.io/v3/a31682bec41f49e68b7749cc39c2136d
-      - ADDRESSES=0xEEEEE5E7Fa69A5D258b1377b116b4A0020cBcA1B,0xFa0E4F48a369BB3eCBCEe0B5119379EA8D1bcF29
+    volumes:
+      - ./addresses.txt:/app/addresses.txt
     ports:
-      - 9091:9090
+      - 9015:9015
   prometheus:
     image: prom/prometheus:v2.1.0
     volumes:
