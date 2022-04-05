@@ -1,0 +1,10 @@
+route:
+  receiver: 'slack'
+
+receivers:
+  - name: 'slack'
+    slack_configs:
+      - send_resolved: true
+        username: 'alertmanager'
+        channel: '#test-env'
+        api_url: 'https://hooks.slack.com/services/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'
